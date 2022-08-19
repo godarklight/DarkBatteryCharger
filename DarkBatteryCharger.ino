@@ -126,7 +126,7 @@ void loop() {
   unsigned long currentTime = millis();
   
   //10Hz voltage update
-  if (currentTime - lastTime > 100)
+  if (currentTime - lastVoltageTime > 100)
   {
     lastVoltageTime = currentTime;
     average[averageWritePos] = analogRead(batteryPin);
